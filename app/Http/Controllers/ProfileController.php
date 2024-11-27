@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class ProfileController extends Controller
 {
 
-    public function index()
+    public function list(Request $request)
     {
         $users = AuthenticatedUser::paginate(10);
         return view('web.sections.profile.index', compact('users'));
@@ -100,7 +100,7 @@ class ProfileController extends Controller
             abort(403);
         }
 
-        // Get the authenticated user
+        /** @var AuthenticatedUser $user */
         $user = Auth::user();
 
         // Validate the request data
