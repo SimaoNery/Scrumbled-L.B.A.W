@@ -1,0 +1,3 @@
+[submodule "wiki"]
+	path = wiki
+	url = git@gitlab.up.pt:lbaw/lbaw2425/lbaw24113.wiki.git
